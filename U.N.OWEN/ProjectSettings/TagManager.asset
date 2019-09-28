@@ -3,9 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - RangeEnemy
-  - MeleeEnemy
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -43,27 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-<<<<<<< HEAD
-  - name: player
-    uniqueID: 4134200109
-    locked: 0
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  - name: Floor
-    uniqueID: 18855983
-    locked: 0
->>>>>>> fdf37568e7b35530661e93198285aebcf7c97137
-=======
->>>>>>> 836a469d74a908ed4cd22b869aa16efa8f4ef349
-  - name: Player
-    uniqueID: 1162208247
-    locked: 0
-<<<<<<< HEAD
->>>>>>> 6554e27dbd0528f52dfa26e140407e6cec466ee7
->>>>>>> 1a596035487d3060d03222cd66cfde29af198db6
-=======
->>>>>>> 836a469d74a908ed4cd22b869aa16efa8f4ef349
