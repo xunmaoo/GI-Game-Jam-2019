@@ -17,6 +17,8 @@ public class RangeEnemy : MonoBehaviour
 
     public bool getAttacked = false;
 
+    public 
+
     // Start is called before the first frame update
     void Start()
     {

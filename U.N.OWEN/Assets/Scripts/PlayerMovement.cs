@@ -9,6 +9,12 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator anim;
 
+    public static bool playerLocked = false;
+
+    private int playerDirection = 0;
+
+    public GameObject Bullet;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,12 +24,33 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
-        vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
-        anim.SetFloat("x", horizontal);
-        anim.SetFloat("y", vertical);
+        if (Input.GetKeyDown(KeyCode.W)) playerDirection = 1;
+        else if (Input.GetKeyDown(KeyCode.D)) playerDirection = 2;
+        else if (Input.GetKeyDown(KeyCode.S)) playerDirection = 3;
+        else if (Input.GetKeyDown(KeyCode.A)) playerDirection = 4;
 
-        transform.position = new Vector2(transform.position.x + horizontal, transform.position.y + vertical);
+
+        if (playerLocked == false)
+        {
+            horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
+            vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+            anim.SetFloat("x", horizontal);
+            anim.SetFloat("y", vertical);
+
+            transform.position = new Vector2(transform.position.x + horizontal, transform.position.y + vertical);
+        }
+
+        PlayerAttack();
+    }
+
+    void PlayerAttack()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            // Instantiate a bullet
+            GameObject created_bullet = Instantiate(Bullet, gameObject.transform.position, Quaternion.identity) as GameObject;
+            created_bullet.GetComponent<Bullet>().direction = playerDirection;
+        }
     }
 }
 
