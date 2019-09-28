@@ -3,7 +3,9 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - RangeEnemy
+  - MeleeEnemy
   layers:
   - Default
   - TransparentFX
@@ -41,15 +43,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-  - name: Floor
-    uniqueID: 18855983
-    locked: 0
->>>>>>> fdf37568e7b35530661e93198285aebcf7c97137
   - name: Player
-    uniqueID: 3481958243
+    uniqueID: 1162208247
     locked: 0
->>>>>>> 6554e27dbd0528f52dfa26e140407e6cec466ee7
