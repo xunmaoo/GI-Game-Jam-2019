@@ -17,6 +17,8 @@ public class RangeEnemy : MonoBehaviour
 
     public bool getAttacked = false;
 
+    public int hp = 1;
+
     public 
 
     // Start is called before the first frame update
@@ -44,6 +46,8 @@ public class RangeEnemy : MonoBehaviour
         Shoot();
 
         if (getAttacked == true) GetAttacked();
+
+        Die();
     }
 
     void GetAttacked()
@@ -69,6 +73,14 @@ public class RangeEnemy : MonoBehaviour
         else
         {
             timeBtwShots -= Time.deltaTime;
+        }
+    }
+
+    void Die()
+    {
+        if (hp == 0)
+        {
+            Destroy(gameObject);
         }
     }
 }

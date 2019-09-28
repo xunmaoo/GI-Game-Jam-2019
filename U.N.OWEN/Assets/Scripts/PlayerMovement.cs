@@ -15,6 +15,10 @@ public class PlayerMovement : MonoBehaviour
 
     public GameObject Bullet;
 
+    private bool isWalking = false;
+    public AudioSource walkSound;
+    public GameObject gunSound;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,9 +42,10 @@ public class PlayerMovement : MonoBehaviour
             anim.SetFloat("y", vertical);
 
             transform.position = new Vector2(transform.position.x + horizontal, transform.position.y + vertical);
-        }
 
-        PlayerAttack();
+            PlayerAttack();
+            WalkSound();
+        }
     }
 
     void PlayerAttack()
@@ -50,7 +55,26 @@ public class PlayerMovement : MonoBehaviour
             // Instantiate a bullet
             GameObject created_bullet = Instantiate(Bullet, gameObject.transform.position, Quaternion.identity) as GameObject;
             created_bullet.GetComponent<Bullet>().direction = playerDirection;
+
+            if (!gunSound.GetComponent<AudioSource>().isPlaying)
+            {
+                gunSound.GetComponent<AudioSource>().Play();
+            }
         }
+    }
+
+    void WalkSound()
+    {
+        isWalking = (horizontal != 0 || vertical != 0);
+
+        if (isWalking)
+        {
+            if (!walkSound.isPlaying)
+            {
+                walkSound.Play();
+            }
+        }
+        else walkSound.Stop();
     }
 }
 

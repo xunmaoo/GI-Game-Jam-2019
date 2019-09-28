@@ -42,4 +42,18 @@ public class Bullet : MonoBehaviour
         disappearTime += 1;
         transform.position = new Vector2(transform.position.x + horizontal * speed * Time.deltaTime, transform.position.y + vertical * speed * Time.deltaTime);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("MeleeEnemy"))
+        {
+            collision.gameObject.GetComponent<MeleeEnemy>().hp -= 1;
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("RangeEnemy"))
+        {
+            collision.gameObject.GetComponent<RangeEnemy>().hp -= 1;
+            Destroy(gameObject);
+        }
+    }
 }

@@ -135,7 +135,10 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
     <None Include="Assets\Gizmos\Other Assets\Cinemachine\ReleaseNotes.txt" />
+<<<<<<< HEAD
     <None Include="Assets\Dark_Forest\about.txt" />
+=======
+>>>>>>> 836a469d74a908ed4cd22b869aa16efa8f4ef349
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Medieval_pixel_art_asset_FREE\pixel_snapping_README.txt" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
