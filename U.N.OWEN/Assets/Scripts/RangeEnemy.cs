@@ -15,6 +15,8 @@ public class RangeEnemy : MonoBehaviour
 
     public GameObject projectile;
 
+    public bool getAttacked = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,6 +39,26 @@ public class RangeEnemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
         }
 
+        Shoot();
+
+        if (getAttacked == true) GetAttacked();
+    }
+
+    void GetAttacked()
+    {
+        int bounce_time = 0;
+
+        while (bounce_time < 60)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.position, -speed * Time.deltaTime);
+            bounce_time += 1;
+        }
+
+        getAttacked = false;
+    }
+
+    void Shoot()
+    {
         if (timeBtwShots <= 0)
         {
             Instantiate(projectile, transform.position, Quaternion.identity);

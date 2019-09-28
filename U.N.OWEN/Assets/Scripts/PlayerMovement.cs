@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
     private float horizontal, vertical;
     public float speed = 5f;
 
+    public Animator anim;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal") * speed * Time.deltaTime;
         vertical = Input.GetAxis("Vertical") * speed * Time.deltaTime;
+        anim.SetFloat("x", horizontal);
+        anim.SetFloat("y", vertical);
 
         transform.position = new Vector2(transform.position.x + horizontal, transform.position.y + vertical);
     }
