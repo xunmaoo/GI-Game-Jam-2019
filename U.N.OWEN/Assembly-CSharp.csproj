@@ -126,6 +126,7 @@
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\RangeEnemy.cs" />
+    <Compile Include="Assets\Scripts\StartScene Scripts\MenuManager.cs" />
     <None Include="Assets\Other Assets\Cinemachine\ReleaseNotes.txt" />
     <None Include="Assets\README.txt" />
     <Reference Include="Unity.Timeline.Editor">

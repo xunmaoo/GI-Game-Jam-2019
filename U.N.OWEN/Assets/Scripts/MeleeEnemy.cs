@@ -10,7 +10,10 @@ public class MeleeEnemy : MonoBehaviour
 
     private int direction = -1;
     private int moves = 0;
-    
+
+    public bool getAttacked = false;
+    public float bounceSpeed = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,19 +23,37 @@ public class MeleeEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float dist = Vector3.Distance(transform.position, player.transform.position);
-
-        if (dist < maxDist) transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step/5 * Time.deltaTime);
+        if (getAttacked == true) GetAttacked();
         else
         {
-            moves += 1;
-            transform.position = new Vector3(transform.position.x + direction * step * Time.deltaTime, transform.position.y, transform.position.z);
+            float dist = Vector3.Distance(transform.position, player.transform.position);
 
-            if (moves >= 60)
+            if (dist < maxDist) transform.position = Vector3.MoveTowards(transform.position, player.transform.position, step / 5 * Time.deltaTime);
+            else
             {
-                moves = 0;
-                direction = -direction;
+                moves += 1;
+                transform.position = new Vector3(transform.position.x + direction * step * Time.deltaTime, transform.position.y, transform.position.z);
+
+                if (moves >= 60)
+                {
+                    moves = 0;
+                    direction = -direction;
+                }
             }
         }
+    }
+
+    void GetAttacked()
+    {
+        Debug.Log("Get Lost");
+        int bounce_time = 0;
+
+        while (bounce_time < 60)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, -bounceSpeed * Time.deltaTime);
+            bounce_time += 1;
+        }
+
+        getAttacked = false;
     }
 }
