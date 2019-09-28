@@ -76,11 +76,7 @@
     <Compile Include="Assets\Standard Assets\CrossPlatformInput\Scripts\VirtualInput.cs" />
     <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
     <Reference Include="Unity.Timeline.Editor">
-<<<<<<< HEAD
       <HintPath>C:/Users/wjhwj/Documents/GitHub/GI-Game-Jam-2019/U.N.OWEN/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-=======
-      <HintPath>C:/Users/tieuc/Github/GI-Game-Jam-2019/U.N.OWEN/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
->>>>>>> 16f451319dc4d972a399f50302aa20ac201560c5
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>C:/Users/wjhwj/Documents/GitHub/GI-Game-Jam-2019/U.N.OWEN/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
@@ -125,11 +121,7 @@
       <HintPath>C:/Users/wjhwj/Documents/GitHub/GI-Game-Jam-2019/U.N.OWEN/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-<<<<<<< HEAD
       <HintPath>C:/Users/wjhwj/Documents/GitHub/GI-Game-Jam-2019/U.N.OWEN/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
-=======
-      <HintPath>C:/Users/tieuc/Github/GI-Game-Jam-2019/U.N.OWEN/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
->>>>>>> 16f451319dc4d972a399f50302aa20ac201560c5
     </Reference>
     <Reference Include="Unity.ShaderGraph.Editor">
       <HintPath>C:/Users/wjhwj/Documents/GitHub/GI-Game-Jam-2019/U.N.OWEN/Library/ScriptAssemblies/Unity.ShaderGraph.Editor.dll</HintPath>
